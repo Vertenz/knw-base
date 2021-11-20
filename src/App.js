@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import LayoutWrap from "./components/Layout-wrap";
-import { BrowserRouter as Router} from "react-router-dom";
 
 function App() {
     let [darkTheme, setDarkTheme] = useState(true)
@@ -21,10 +20,8 @@ function App() {
 
     return (
         <div className="App">
-            <Router>
                 <LayoutWrap/>
                 <button onClick={changeColor}>A ny davaj polezaj suda</button>
-            </Router>
         </div>
     );
 }

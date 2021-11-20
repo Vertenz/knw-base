@@ -8,7 +8,11 @@ const Menu = (props) => {
     }
 
     return (
-        <menu>
+        <menu className={props.showMenu ? "menu menu_active" : "menu"}>
+                <div className="cross" onClick={changeShowMenu}>
+                    <div className="cross__first" />
+                    <div className="cross__second" />
+                </div>
                 <ul onClick={changeShowMenu}>
                     <li><Link to='/html'>HTML</Link></li>
                     <li><Link to='/css'>CSS</Link></li>

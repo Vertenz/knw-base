@@ -26,7 +26,7 @@ const Info = () => {
             {info.blocks
                 ? <div className="info-datas">
                     {info.blocks.map( (item, index) => {
-                        return <InfoBlock question={item.question} answer={item.answer} code={item.code} index={index}
+                        return <InfoBlock question={item.question} answer={item.answer} code={item.code} id={item.id}
                                           key={item.question}/>
                     })}
                 </div>
