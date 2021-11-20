@@ -35,7 +35,7 @@ const Header = (props) => {
                     <div> {!showSmallSearch && <FontAwesomeIcon icon={["fab", "searchengin"]} size="lg" onClick={changeShowSmallSearch}
                                           className={"search-block_small"}/>}
                         {showSmallSearch &&
-                        <Search setShowMenu={props.setShowMenu}/>}</div> : <Search/>}
+                        <Search setShowMenu={props.setShowMenu}/>}</div> : <Search setShowMenu={props.setShowMenu}/>}
             </div>
         </header>
     );
