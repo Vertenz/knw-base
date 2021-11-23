@@ -5,12 +5,13 @@ const InfoBlock = props => {
     return (
         <div className="info-block">
             <h2 className="info-block__question" id={props.id}>
-                <a href={'#' + props.id}>{props.id}. {props.question}</a>
+                {props.id}.
+                <a className={'info-block__a'} href={'#' + props.id}> {props.question}</a>
             </h2>
             <p className="info-block__text">{props.answer}</p>
             {props.code &&
             <pre>
-                    <code>
+                    <code className={"info-block__code"}>
                         {props.code}
                     </code>
                 </pre>

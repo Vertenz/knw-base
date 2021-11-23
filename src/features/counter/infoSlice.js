@@ -255,6 +255,75 @@ const js = [
         question: 'Что такое область видимости (Scope)?',
         answer: 'Область видимости — это место, где (или откуда) мы имеем доступ к переменным или функциям. JS имеем три типа областей видимости: глобальная, функциональная и блочная (ES6).',
         code: null
+    },
+    {
+        id: 8,
+        page: 'js',
+        question: 'Преобразование в число',
+        answer: 'Преобразование происходит при использовании математических выражений. Можно преобразовать при помощи Number() или +. "6" = 6, "6z" = NaN (ошибка чтения числа на месте символа "z"), true = 1, false = 0, undefined = NaN, null = 0',
+        code: null
+    },
+    {
+        id: 9,
+        page: 'js',
+        question: 'Логическое преобразование',
+        answer: 'Значения, которые интуитивно «пустые», вроде 0, пустой строки, null, undefined и NaN, становятся false, Все остальные значения становятся true.',
+        code: null
+    },
+    {
+        id: 10,
+        page: 'js',
+        question: 'Флаги свойств (объект)',
+        answer: 'Помимо значения value, свойства объекта имеют три специальных атрибута (так называемые «флаги»).\n' +
+            '\n' +
+            'writable – если true, свойство можно изменить, иначе оно только для чтения.\n' +
+            'enumerable – если true, свойство перечисляется в циклах, в противном случае циклы его игнорируют.\n' +
+            'configurable – если true, свойство можно удалить, а эти атрибуты можно изменять, иначе этого делать нельзя.',
+        code: 'const test = {};\n' +
+            '\n' +
+            'test[\'some str\'] = true\n' +
+            'test.test_nam = false\n' +
+            '\n' +
+            '//узнать флаги\n' +
+            'let res = Object.getOwnPropertyDescriptor(test, \'some str\')\n' +
+            '\n' +
+            'console.log(res)\n' +
+            '\n' +
+            '//изменить флаги\n' +
+            '//Object.defineProperty(obj, prop, descriptor)\n' +
+            '\n' +
+            'Object.defineProperty(test, \'some str\', {\n' +
+            '    writable: false\n' +
+            '})\n' +
+            'let res2 = Object.getOwnPropertyDescriptor(test, \'some str\')\n' +
+            'console.log(res2)\n'+
+            'console:' +
+            '{ value: true, writable: true, enumerable: true, configurable: true }\n' +
+            '{ value: true, writable: false, enumerable: true, configurable: true }\n'
+    },
+    {
+        id: 11,
+        page: 'js',
+        question: 'Закрытие / запечатывание объекта',
+        answer: 'Дескрипторы свойств работают на уровне конкретных свойств.\n' +
+            '\n' +
+            'Но ещё есть методы, которые ограничивают доступ ко всему объекту:\n' +
+            '\n' +
+            'Object.preventExtensions(obj)\n' +
+            'Запрещает добавлять новые свойства в объект.\n' +
+            'Object.seal(obj)\n' +
+            'Запрещает добавлять/удалять свойства. Устанавливает configurable: false для всех существующих свойств.\n' +
+            'Object.freeze(obj)\n' +
+            'Запрещает добавлять/удалять/изменять свойства. Устанавливает configurable: false, writable: false для всех существующих свойств.\n' +
+            'А также есть методы для их проверки:\n' +
+            '\n' +
+            'Object.isExtensible(obj)\n' +
+            'Возвращает false, если добавление свойств запрещено, иначе true.\n' +
+            'Object.isSealed(obj)\n' +
+            'Возвращает true, если добавление/удаление свойств запрещено и для всех существующих свойств установлено configurable: false.\n' +
+            'Object.isFrozen(obj)\n' +
+            'Возвращает true, если добавление/удаление/изменение свойств запрещено, и для всех текущих свойств установлено configurable: false, writable: false.',
+        code: null
     }
 ]
 

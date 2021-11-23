@@ -13,13 +13,13 @@ const Menu = (props) => {
                     <div className="cross__first" />
                     <div className="cross__second" />
                 </div>
-                <ul onClick={changeShowMenu}>
-                    <li><Link to='/html'>HTML</Link></li>
-                    <li><Link to='/css'>CSS</Link></li>
-                    <li><Link to='/js'>JavaScript</Link></li>
-                    <li><Link to='/vue'>Vue</Link></li>
-                    <li><Link to='/react'>React</Link></li>
-                    <li><Link to='/'>Домашняя страница</Link></li>
+                <ul className={'menu__ul'} onClick={changeShowMenu}>
+                    <li className={'menu__li'}><Link className={'menu__a'} to='/html'>HTML</Link></li>
+                    <li className={'menu__li'}><Link className={'menu__a'} to='/css'>CSS</Link></li>
+                    <li className={'menu__li'}><Link className={'menu__a'} to='/js'>JavaScript</Link></li>
+                    <li className={'menu__li'}><Link className={'menu__a'} to='/vue'>Vue</Link></li>
+                    <li className={'menu__li'}><Link className={'menu__a'} to='/react'>React</Link></li>
+                    <li className={'menu__li'}><Link className={'menu__a'} to='/'>Домашняя страница</Link></li>
                 </ul>
         </menu>
     );
